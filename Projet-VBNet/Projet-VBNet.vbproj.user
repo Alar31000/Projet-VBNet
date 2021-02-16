@@ -5,13 +5,13 @@
     <Compile Update="Contrats.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Equipements.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormFacture.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Login.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="My Project\FormEquipement.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PageConsulter.vb">

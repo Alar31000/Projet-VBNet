@@ -53,7 +53,7 @@ Partial Class FormFacture
         Me.CheckedListBoxModePaiement.Items.AddRange(New Object() {"Prélèvement  automatique", "Carte credit "})
         Me.CheckedListBoxModePaiement.Location = New System.Drawing.Point(253, 208)
         Me.CheckedListBoxModePaiement.Name = "CheckedListBoxModePaiement"
-        Me.CheckedListBoxModePaiement.Size = New System.Drawing.Size(177, 40)
+        Me.CheckedListBoxModePaiement.Size = New System.Drawing.Size(195, 24)
         Me.CheckedListBoxModePaiement.TabIndex = 1
         '
         'TextBoxNumeroCarte
