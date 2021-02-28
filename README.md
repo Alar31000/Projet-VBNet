@@ -1,6 +1,6 @@
 # Projet-VBNet
 Le Projet de VBNet
-Notre systeme SAGARI, c'est une application VB.net pour une entreprise qui s'appele ABONNET
+Notre systeme SGARI, c'est une application VB.net pour une entreprise qui s'appele ABONNET
 
 Le système de gestion des abonnés d’Internet permet à ABONNET d’offrir à ses clients des
 abonnements (contrats de location d’Internet) compétitifs selon leurs besoins.

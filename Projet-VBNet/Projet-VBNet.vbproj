@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <RootNamespace>Projet_VBNet</RootNamespace>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>Projet_VBNet.Login</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
   </PropertyGroup>
@@ -36,6 +36,10 @@
 
   <ItemGroup>
     <Folder Include="My Project\NewFolder\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.113.7" />
   </ItemGroup>
 
 </Project>
