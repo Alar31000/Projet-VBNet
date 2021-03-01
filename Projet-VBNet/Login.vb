@@ -55,9 +55,9 @@ Public Class Login
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
         If IsUserValid(txt_username.Text.Trim, txt_password.Text.Trim) Then
-            MessageBox.Show("Bon utilisateur access permise")
+            MessageBox.Show("Bienvenue.")
         Else
-            MessageBox.Show("Access est refuse, mauvaise nom de l'utilisateur ou mot de passe")
+            MessageBox.Show("Accès refusé, Veuillez Verifier Votre Nom d'Utilisatuer ou Votre Mot de Passe.")
 
         End If
 
@@ -66,10 +66,7 @@ Public Class Login
 
     Private Function IsUserValid(username As String, pass As String) As Boolean
         Dim IsValidUser As Boolean = False
-        Dim userInfo As DataRow = Nothing
-        Dim sql As String = "SELECT * FROM Employe  where username= @username and pass = @pass "
-
-
+        Dim sql As String = "SELECT * FROM Employe where username = @username and pass = @pass "
 
         Try
             Using conn As New SQLiteConnection(connectionString.ToString)
@@ -83,7 +80,7 @@ Public Class Login
                         Dim dt As New DataTable
                         da.Fill(dt)
                         If dt.Rows.Count > 0 Then
-                            userInfo = dt.Rows(0)
+                            Dim userInfo As DataRow = dt.Rows(0)
                             If userInfo("user_password").Equals(pass) Then
                                 IsValidUser = True
 
