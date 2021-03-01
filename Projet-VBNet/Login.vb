@@ -106,7 +106,7 @@ Public Class Login
         Me.Close()
     End Sub
 
-    Private Sub txt_password_TextChanged(sender As Object, e As EventArgs) Handles txt_password.TextChanged
+    Private Sub Txt_password_TextChanged(sender As Object, e As EventArgs) Handles txt_password.TextChanged
 
     End Sub
 End Class
