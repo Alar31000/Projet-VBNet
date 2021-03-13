@@ -27,6 +27,7 @@ Partial Class Equipements
         Me.LabelModem = New System.Windows.Forms.Label()
         Me.LabelMicroOrdi = New System.Windows.Forms.Label()
         Me.GroupBoxEquipement = New System.Windows.Forms.GroupBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.LabelMOrdinateurCost = New System.Windows.Forms.Label()
         Me.LabelModemCost = New System.Windows.Forms.Label()
         Me.LabelInternetCost = New System.Windows.Forms.Label()
@@ -82,6 +83,7 @@ Partial Class Equipements
         '
         'GroupBoxEquipement
         '
+        Me.GroupBoxEquipement.Controls.Add(Me.Label1)
         Me.GroupBoxEquipement.Controls.Add(Me.LabelMOrdinateurCost)
         Me.GroupBoxEquipement.Controls.Add(Me.LabelModemCost)
         Me.GroupBoxEquipement.Controls.Add(Me.LabelInternetCost)
@@ -104,6 +106,15 @@ Partial Class Equipements
         Me.GroupBoxEquipement.TabIndex = 23
         Me.GroupBoxEquipement.TabStop = False
         Me.GroupBoxEquipement.Text = "Equipements"
+        '
+        'Label1
+        '
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Location = New System.Drawing.Point(425, 212)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(62, 21)
+        Me.Label1.TabIndex = 31
+        Me.Label1.Text = "Total :"
         '
         'LabelMOrdinateurCost
         '
@@ -131,9 +142,9 @@ Partial Class Equipements
         Me.LabelInternetCost.ForeColor = System.Drawing.Color.Black
         Me.LabelInternetCost.Location = New System.Drawing.Point(493, 123)
         Me.LabelInternetCost.Name = "LabelInternetCost"
-        Me.LabelInternetCost.Size = New System.Drawing.Size(45, 25)
+        Me.LabelInternetCost.Size = New System.Drawing.Size(50, 25)
         Me.LabelInternetCost.TabIndex = 28
-        Me.LabelInternetCost.Text = "100"
+        Me.LabelInternetCost.Text = "100 "
         '
         'LabelTotal
         '
@@ -195,11 +206,11 @@ Partial Class Equipements
         '
         Me.ButtonCalculate.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.ButtonCalculate.ForeColor = System.Drawing.Color.Black
-        Me.ButtonCalculate.Location = New System.Drawing.Point(388, 200)
+        Me.ButtonCalculate.Location = New System.Drawing.Point(493, 262)
         Me.ButtonCalculate.Name = "ButtonCalculate"
-        Me.ButtonCalculate.Size = New System.Drawing.Size(68, 33)
+        Me.ButtonCalculate.Size = New System.Drawing.Size(86, 33)
         Me.ButtonCalculate.TabIndex = 16
-        Me.ButtonCalculate.Text = "Total"
+        Me.ButtonCalculate.Text = "Calculer"
         Me.ButtonCalculate.UseVisualStyleBackColor = True
         '
         'Equipements
@@ -231,4 +242,5 @@ Partial Class Equipements
     Friend WithEvents LabelModemCost As Label
     Friend WithEvents LabelInternetCost As Label
     Friend WithEvents LabelTotal As Label
+    Friend WithEvents Label1 As Label
 End Class
