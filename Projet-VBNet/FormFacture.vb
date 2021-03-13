@@ -135,10 +135,18 @@
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        End
+        Me.Close()
     End Sub
 
     Private Sub LabelDateEx_Click(sender As Object, e As EventArgs) Handles LabelDateEx.Click
+
+    End Sub
+
+    Private Sub LabelSuccursale_Click(sender As Object, e As EventArgs) Handles LabelSuccursale.Click
+
+    End Sub
+
+    Private Sub TextBoxNComptec_TextChanged(sender As Object, e As EventArgs)
 
     End Sub
 End Class
