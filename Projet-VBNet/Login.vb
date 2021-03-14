@@ -1,43 +1,32 @@
-﻿Imports System.Data.SQLite
-Imports System.IO
+﻿Imports System.IO
+Imports System.Data.SQLite
+
 Public Class Login
-    Private connectionString As String = String.Empty
+
+    Private connectionString = String.Empty
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
         connectionString = String.Format("Data Source={0};Version=3;",
-                                         Directory.GetCurrentDirectory() & "\" & "SAGARI.db3"
-                                         )
-        'Ici pour affichier la base de donnees dans la liste des clients et les contrats
-        ' Dim myconnection As New SQLiteConnection("Data Source=d:\SAGARI.db3;Version=3")
-        '   myconnection.Open()
-
-        ' Dim cmd As New SQLiteCommand
-        ' cmd.Connection = myconnection
-        ' cmd.CommandText = "Select * from SAGARI"
-
-        ' Dim reader As SQLiteDataReader = cmd.ExecuteReader
-        ' Dim datatable As New DataTable
-        ' datatable.Load(reader)
-        ' reader.Close()
-        ' myconnection.Close()
+                                         Directory.GetCurrentDirectory() & "\" & "usersDB.db")
 
 
     End Sub
+    'Ici pour affichier la base de donnees dans la liste des clients et les contrats
+    'Dim myconnection As New SQLiteConnection("Data Source=\SAGARI.db3;Version=3")
+    'myconnection.Open()
 
-    Private Sub Label1_Click(sender As Object, e As EventArgs)
+    'Dim cmd As New SQLiteCommand
+    'cmd.Connection = myconnection
+    'cmd.CommandText = "Select * from Employe"
 
-    End Sub
+    'Dim reader As SQLiteDataReader = cmd.ExecuteReader
+    'Dim datatable As New DataTable
+    'DataTable.Load(reader)
+    'reader.Close()
+    'myconnection.Close()
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs)
-
-    End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -54,53 +43,64 @@ Public Class Login
     End Sub
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
-        If IsUserValid(txt_username.Text.Trim, txt_password.Text.Trim) Then
-            MessageBox.Show("Bon utilisateur access permise")
+
+        If IsUserValid(txt_username.Text.Trim, txt_password.Text.Trim) = True Then
+            MsgBox("Bienvenue.")
+
+            ' if the password is valid then open the Main user form
+            Me.Hide()
+            Dim frmMainForm As New PageConsulter
+            frmMainForm.Show()
+
         Else
-            MessageBox.Show("Access est refuse, mauvaise nom de l'utilisateur ou mot de passe")
-
+            MsgBox("Accès refusé, Veuillez Verifier Votre Nom d'Utilisatuer ou Votre Mot de Passe.")
         End If
-
 
     End Sub
 
-    Private Function IsUserValid(username As String, pass As String) As Boolean
+    Private Function IsUserValid(username As String, password As String) As Boolean
         Dim IsValidUser As Boolean = False
         Dim userInfo As DataRow = Nothing
-        Dim sql As String = "SELECT * FROM Employe  where username= @username and pass = @pass "
-
-
+        Dim sql As String = "SELECT * FROM users WHERE user_name = @username;"
 
         Try
             Using conn As New SQLiteConnection(connectionString.ToString)
                 Using cmd As New SQLiteCommand(conn)
                     cmd.Parameters.AddWithValue("@username", username)
-                    cmd.Parameters.AddWithValue("@pass", pass)
-
                     cmd.CommandText = sql
                     conn.Open()
                     Using da As New SQLiteDataAdapter(cmd)
                         Dim dt As New DataTable
                         da.Fill(dt)
+
                         If dt.Rows.Count > 0 Then
                             userInfo = dt.Rows(0)
-                            If userInfo("user_password").Equals(pass) Then
-                                IsValidUser = True
+                            ' get the password salt from database
+                            'Dim dbSalt As String = userInfo("user_salt")
 
+                            ' get the hashed password from the database
+                            Dim dbPass As String = userInfo("user_password")
+
+                            ' Hash the password entered by user when login with same salt from database
+                            'Dim passEntered As String = Utils.GetSaltedHash(password, dbSalt)
+
+                            ' then compare the two hased password if they are the same then return valid password
+                            If String.Compare(dbPass, password, False) = 0 Then
+                                IsValidUser = True
                             End If
+
                         End If
+
+                        'If userInfo("user_password").Equals(password) Then
+                        '    IsValidUser = True
+                        'End If
+
                     End Using
                 End Using
-
             End Using
-
-
         Catch ex As Exception
-
+            MsgBox(ex.Message)
         End Try
-
-
-
 
         Return IsValidUser
     End Function
@@ -109,7 +109,7 @@ Public Class Login
         Me.Close()
     End Sub
 
-    Private Sub txt_password_TextChanged(sender As Object, e As EventArgs) Handles txt_password.TextChanged
+    Private Sub Txt_password_TextChanged(sender As Object, e As EventArgs) Handles txt_password.TextChanged
 
     End Sub
 End Class
