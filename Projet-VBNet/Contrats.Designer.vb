@@ -31,18 +31,17 @@ Partial Class Form1
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(308, 323)
+        Me.TextBox3.Location = New System.Drawing.Point(68, 22)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(124, 23)
         Me.TextBox3.TabIndex = 4
@@ -56,7 +55,7 @@ Partial Class Form1
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(308, 268)
+        Me.TextBox5.Location = New System.Drawing.Point(327, 268)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(124, 23)
         Me.TextBox5.TabIndex = 6
@@ -70,7 +69,7 @@ Partial Class Form1
         '
         'Label2
         '
-        Me.Label2.Location = New System.Drawing.Point(176, 271)
+        Me.Label2.Location = New System.Drawing.Point(159, 292)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(126, 20)
         Me.Label2.TabIndex = 8
@@ -109,39 +108,12 @@ Partial Class Form1
         Me.Button1.Text = "Rechercher"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(12, 253)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(141, 51)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Creer un nouveau contrat"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'TextBox1
         '
         Me.TextBox1.Location = New System.Drawing.Point(658, 16)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(97, 23)
         Me.TextBox1.TabIndex = 14
-        '
-        'Button3
-        '
-        Me.Button3.Location = New System.Drawing.Point(12, 326)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(141, 51)
-        Me.Button3.TabIndex = 15
-        Me.Button3.Text = "Modifier"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button4
-        '
-        Me.Button4.Location = New System.Drawing.Point(12, 387)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(141, 51)
-        Me.Button4.TabIndex = 16
-        Me.Button4.Text = "Résilier"
-        Me.Button4.UseVisualStyleBackColor = True
         '
         'Label1
         '
@@ -151,41 +123,56 @@ Partial Class Form1
         Me.Label1.TabIndex = 17
         Me.Label1.Text = "Numéro"
         '
-        'DataGridView1
+        'GroupBox1
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 45)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.RowTemplate.Height = 25
-        Me.DataGridView1.Size = New System.Drawing.Size(766, 202)
-        Me.DataGridView1.TabIndex = 18
+        Me.GroupBox1.Controls.Add(Me.Label7)
+        Me.GroupBox1.Controls.Add(Me.Label6)
+        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Location = New System.Drawing.Point(23, 93)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(461, 159)
+        Me.GroupBox1.TabIndex = 18
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Identification Client"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(15, 25)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(34, 15)
+        Me.Label6.TabIndex = 5
+        Me.Label6.Text = "Nom"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(208, 25)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(49, 15)
+        Me.Label7.TabIndex = 6
+        Me.Label7.Text = "Prénom"
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
         Me.Name = "Form1"
-        Me.Text = "Contrats"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "Creér un nouveau contrat"
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -199,10 +186,9 @@ Partial Class Form1
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
     Friend WithEvents Label1 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents Label6 As Label
 End Class
