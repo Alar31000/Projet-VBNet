@@ -48,7 +48,7 @@
         End If
     End Sub
 
-    Private Sub ButtonQuitter_Click(sender As Object, e As EventArgs) Handles ButtonQuitter.Click
+    Private Sub ButtonQuitter_Click(sender As Object, e As EventArgs) 
         'quitter la fenêtre
         End
     End Sub
