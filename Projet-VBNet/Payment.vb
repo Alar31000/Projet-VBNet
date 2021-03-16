@@ -1,4 +1,4 @@
-﻿Public Class FormFacture
+﻿Public Class Payment
     Private Sub CheckedListBoxModePaiement_SelectedIndexChanged(sender As Object, e As EventArgs) 
 
     End Sub
