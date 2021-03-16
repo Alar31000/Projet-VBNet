@@ -50,6 +50,7 @@ Partial Class PageConsulter
         Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SGARI = New System.Windows.Forms.MenuStrip()
         Me.mnuContrat = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuCreerContrat = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuEquipements = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuServices = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuFacturation = New System.Windows.Forms.ToolStripMenuItem()
@@ -57,7 +58,6 @@ Partial Class PageConsulter
         Me.mnuRapports = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuSecurite = New System.Windows.Forms.ToolStripMenuItem()
         Me.mnuAide = New System.Windows.Forms.ToolStripMenuItem()
-        Me.mnuCreerContrat = New System.Windows.Forms.ToolStripMenuItem()
         Me.SGARI.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -247,6 +247,12 @@ Partial Class PageConsulter
         Me.mnuContrat.Size = New System.Drawing.Size(59, 20)
         Me.mnuContrat.Text = "Contrat"
         '
+        'mnuCreerContrat
+        '
+        Me.mnuCreerContrat.Name = "mnuCreerContrat"
+        Me.mnuCreerContrat.Size = New System.Drawing.Size(56, 20)
+        Me.mnuCreerContrat.Text = "Creér..."
+        '
         'mnuEquipements
         '
         Me.mnuEquipements.Name = "mnuEquipements"
@@ -289,12 +295,6 @@ Partial Class PageConsulter
         Me.mnuAide.Size = New System.Drawing.Size(43, 20)
         Me.mnuAide.Text = "Aide"
         '
-        'mnuCreerContrat
-        '
-        Me.mnuCreerContrat.Name = "mnuCreerContrat"
-        Me.mnuCreerContrat.Size = New System.Drawing.Size(56, 20)
-        Me.mnuCreerContrat.Text = "Creér..."
-        '
         'PageConsulter
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
@@ -303,7 +303,7 @@ Partial Class PageConsulter
         Me.Controls.Add(Me.SGARI)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "PageConsulter"
-        Me.Text = "Form3"
+        Me.Text = "PageConsulter"
         Me.SGARI.ResumeLayout(False)
         Me.SGARI.PerformLayout()
         Me.ResumeLayout(False)
