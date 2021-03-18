@@ -23,11 +23,6 @@ Partial Class PageConsulter
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PageConsulter))
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.MenuStrip = New System.Windows.Forms.MenuStrip()
-        Me.FichierMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ClientsMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AideMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IndexToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -53,54 +48,18 @@ Partial Class PageConsulter
         Me.PasteToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.toolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
         Me.SelectAllToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Contrats = New System.Windows.Forms.Button()
-        Me.Services = New System.Windows.Forms.Button()
-        Me.Équipements = New System.Windows.Forms.Button()
-        Me.Déconnexion = New System.Windows.Forms.Button()
-        Me.MenuStrip.SuspendLayout()
-        Me.TabControl1.SuspendLayout()
+        Me.SGARI = New System.Windows.Forms.MenuStrip()
+        Me.mnuContrat = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuCreerContrat = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuEquipements = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuServices = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuFacturation = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuFournisseurs = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuRapports = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuSecurite = New System.Windows.Forms.ToolStripMenuItem()
+        Me.mnuAide = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SGARI.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 607)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1225, 22)
-        Me.StatusStrip1.TabIndex = 1
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'MenuStrip
-        '
-        Me.MenuStrip.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FichierMenuItem, Me.ClientsMenuItem, Me.AideMenuItem})
-        Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip.Name = "MenuStrip"
-        Me.MenuStrip.Size = New System.Drawing.Size(1225, 28)
-        Me.MenuStrip.TabIndex = 2
-        Me.MenuStrip.Text = "MenuStrip1"
-        '
-        'FichierMenuItem
-        '
-        Me.FichierMenuItem.Name = "FichierMenuItem"
-        Me.FichierMenuItem.Size = New System.Drawing.Size(66, 24)
-        Me.FichierMenuItem.Text = "&Fichier"
-        '
-        'ClientsMenuItem
-        '
-        Me.ClientsMenuItem.Name = "ClientsMenuItem"
-        Me.ClientsMenuItem.Size = New System.Drawing.Size(67, 24)
-        Me.ClientsMenuItem.Text = "&Clients"
-        '
-        'AideMenuItem
-        '
-        Me.AideMenuItem.Name = "AideMenuItem"
-        Me.AideMenuItem.Size = New System.Drawing.Size(54, 24)
-        Me.AideMenuItem.Text = "&Aide"
         '
         'ContentsToolStripMenuItem
         '
@@ -271,108 +230,87 @@ Partial Class PageConsulter
         Me.SelectAllToolStripMenuItem.Size = New System.Drawing.Size(179, 26)
         Me.SelectAllToolStripMenuItem.Text = "Select &All"
         '
-        'TabControl1
+        'SGARI
         '
-        Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
-        Me.TabControl1.Location = New System.Drawing.Point(12, 31)
-        Me.TabControl1.Name = "TabControl1"
-        Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(1048, 573)
-        Me.TabControl1.TabIndex = 3
+        Me.SGARI.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible
+        Me.SGARI.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuContrat, Me.mnuCreerContrat, Me.mnuEquipements, Me.mnuServices, Me.mnuFacturation, Me.mnuFournisseurs, Me.mnuRapports, Me.mnuSecurite, Me.mnuAide})
+        Me.SGARI.Location = New System.Drawing.Point(0, 0)
+        Me.SGARI.Name = "SGARI"
+        Me.SGARI.RenderMode = System.Windows.Forms.ToolStripRenderMode.System
+        Me.SGARI.Size = New System.Drawing.Size(1072, 24)
+        Me.SGARI.TabIndex = 2
+        Me.SGARI.Text = "SGARI"
         '
-        'TabPage1
+        'mnuContrat
         '
-        Me.TabPage1.Location = New System.Drawing.Point(4, 29)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(1040, 540)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "TabPage1"
-        Me.TabPage1.UseVisualStyleBackColor = True
+        Me.mnuContrat.Name = "mnuContrat"
+        Me.mnuContrat.Size = New System.Drawing.Size(59, 20)
+        Me.mnuContrat.Text = "Contrat"
         '
-        'TabPage2
+        'mnuCreerContrat
         '
-        Me.TabPage2.Location = New System.Drawing.Point(4, 29)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1040, 540)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "TabPage2"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.mnuCreerContrat.Name = "mnuCreerContrat"
+        Me.mnuCreerContrat.Size = New System.Drawing.Size(56, 20)
+        Me.mnuCreerContrat.Text = "Creér..."
         '
-        'Button1
+        'mnuEquipements
         '
-        Me.Button1.Location = New System.Drawing.Point(1066, 60)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(147, 43)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.mnuEquipements.Name = "mnuEquipements"
+        Me.mnuEquipements.Size = New System.Drawing.Size(88, 20)
+        Me.mnuEquipements.Text = "Equipements"
         '
-        'Contrats
+        'mnuServices
         '
-        Me.Contrats.Location = New System.Drawing.Point(1066, 109)
-        Me.Contrats.Name = "Contrats"
-        Me.Contrats.Size = New System.Drawing.Size(147, 43)
-        Me.Contrats.TabIndex = 5
-        Me.Contrats.Text = "Contrats"
-        Me.Contrats.UseVisualStyleBackColor = True
+        Me.mnuServices.Name = "mnuServices"
+        Me.mnuServices.Size = New System.Drawing.Size(61, 20)
+        Me.mnuServices.Text = "Services"
         '
-        'Services
+        'mnuFacturation
         '
-        Me.Services.Location = New System.Drawing.Point(1066, 158)
-        Me.Services.Name = "Services"
-        Me.Services.Size = New System.Drawing.Size(147, 43)
-        Me.Services.TabIndex = 6
-        Me.Services.Text = "Services"
-        Me.Services.UseVisualStyleBackColor = True
+        Me.mnuFacturation.Name = "mnuFacturation"
+        Me.mnuFacturation.Size = New System.Drawing.Size(79, 20)
+        Me.mnuFacturation.Text = "Facturation"
         '
-        'Équipements
+        'mnuFournisseurs
         '
-        Me.Équipements.Location = New System.Drawing.Point(1066, 207)
-        Me.Équipements.Name = "Équipements"
-        Me.Équipements.Size = New System.Drawing.Size(147, 43)
-        Me.Équipements.TabIndex = 7
-        Me.Équipements.Text = "Équipements"
-        Me.Équipements.UseVisualStyleBackColor = True
+        Me.mnuFournisseurs.Name = "mnuFournisseurs"
+        Me.mnuFournisseurs.Size = New System.Drawing.Size(85, 20)
+        Me.mnuFournisseurs.Text = "Fournisseurs"
         '
-        'Déconnexion
+        'mnuRapports
         '
-        Me.Déconnexion.Location = New System.Drawing.Point(1066, 557)
-        Me.Déconnexion.Name = "Déconnexion"
-        Me.Déconnexion.Size = New System.Drawing.Size(147, 43)
-        Me.Déconnexion.TabIndex = 8
-        Me.Déconnexion.Text = "Déconnexion"
-        Me.Déconnexion.UseVisualStyleBackColor = True
+        Me.mnuRapports.Name = "mnuRapports"
+        Me.mnuRapports.Size = New System.Drawing.Size(66, 20)
+        Me.mnuRapports.Text = "Rapports"
+        '
+        'mnuSecurite
+        '
+        Me.mnuSecurite.Name = "mnuSecurite"
+        Me.mnuSecurite.Size = New System.Drawing.Size(61, 20)
+        Me.mnuSecurite.Text = "Securité"
+        '
+        'mnuAide
+        '
+        Me.mnuAide.Name = "mnuAide"
+        Me.mnuAide.Size = New System.Drawing.Size(43, 20)
+        Me.mnuAide.Text = "Aide"
         '
         'PageConsulter
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1225, 629)
-        Me.Controls.Add(Me.Déconnexion)
-        Me.Controls.Add(Me.Équipements)
-        Me.Controls.Add(Me.Services)
-        Me.Controls.Add(Me.Contrats)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TabControl1)
-        Me.Controls.Add(Me.StatusStrip1)
-        Me.Controls.Add(Me.MenuStrip)
+        Me.ClientSize = New System.Drawing.Size(1072, 472)
+        Me.Controls.Add(Me.SGARI)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "PageConsulter"
-        Me.Text = "Form3"
-        Me.MenuStrip.ResumeLayout(False)
-        Me.MenuStrip.PerformLayout()
-        Me.TabControl1.ResumeLayout(False)
+        Me.Text = "PageConsulter"
+        Me.SGARI.ResumeLayout(False)
+        Me.SGARI.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents StatusStrip1 As StatusStrip
-    Friend WithEvents MenuStrip As MenuStrip
-    Friend WithEvents FichierMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
-    Friend WithEvents AideMenuItem As ToolStripMenuItem
     Friend WithEvents ContentsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents IndexToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SearchToolStripMenuItem As ToolStripMenuItem
@@ -398,15 +336,18 @@ Partial Class PageConsulter
     Friend WithEvents PasteToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents toolStripSeparator4 As ToolStripSeparator
     Friend WithEvents SelectAllToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AboutToolStripMenuItem1 As ToolStripMenuItem
-    Friend WithEvents ClientsMenuItem As ToolStripMenuItem
-    Friend WithEvents TabControl1 As TabControl
-    Friend WithEvents TabPage1 As TabPage
-    Friend WithEvents TabPage2 As TabPage
-    Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Services As Button
-    Friend WithEvents Équipements As Button
-    Friend WithEvents Déconnexion As Button
-    Friend WithEvents Contrats As Button
+    Friend WithEvents SGARI As MenuStrip
+    Friend WithEvents CreerContrat As ToolStripMenuItem
+    Friend WithEvents mnuEquipements As ToolStripMenuItem
+    Friend WithEvents Contrat As ToolStripMenuItem
+    Friend WithEvents Equipements As ToolStripMenuItem
+    Friend WithEvents mnuContrat As ToolStripMenuItem
+    Friend WithEvents mnuServices As ToolStripMenuItem
+    Friend WithEvents mnuFacturation As ToolStripMenuItem
+    Friend WithEvents mnuFournisseurs As ToolStripMenuItem
+    Friend WithEvents mnuRapports As ToolStripMenuItem
+    Friend WithEvents mnuSecurite As ToolStripMenuItem
+    Friend WithEvents mnuAide As ToolStripMenuItem
+    Friend WithEvents mnuCreerContrat As ToolStripMenuItem
 End Class

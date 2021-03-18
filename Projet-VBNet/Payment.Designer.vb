@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormFacture
+Partial Class Payment
     Inherits System.Windows.Forms.Form
 
     'Form remplace la méthode Dispose pour nettoyer la liste des composants.
@@ -358,7 +358,7 @@ Partial Class FormFacture
         Me.Controls.Add(Me.TextBoxNumeroCarte)
         Me.Controls.Add(Me.GroupBoxFacture)
         Me.Name = "FormFacture"
-        Me.Text = "FormFacture"
+        Me.Text = "Payment"
         Me.GroupBoxFacture.ResumeLayout(False)
         Me.GroupBoxFacture.PerformLayout()
         Me.ResumeLayout(False)

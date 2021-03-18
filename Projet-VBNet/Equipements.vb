@@ -44,11 +44,11 @@
             MsgBox("veuillez cocher la case louer") 'message box si le case louer n'est pas coché
         Else
 
-            FormFacture.Show()
+            Payment.Show()
         End If
     End Sub
 
-    Private Sub ButtonQuitter_Click(sender As Object, e As EventArgs) Handles ButtonQuitter.Click
+    Private Sub ButtonQuitter_Click(sender As Object, e As EventArgs) 
         'quitter la fenêtre
         End
     End Sub

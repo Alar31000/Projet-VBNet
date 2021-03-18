@@ -32,7 +32,6 @@ Partial Class Equipements
         Me.LabelModemCost = New System.Windows.Forms.Label()
         Me.LabelInternetCost = New System.Windows.Forms.Label()
         Me.LabelTotal = New System.Windows.Forms.Label()
-        Me.ButtonQuitter = New System.Windows.Forms.Button()
         Me.CheckBoxLouer = New System.Windows.Forms.CheckBox()
         Me.TextBoxInternet = New System.Windows.Forms.TextBox()
         Me.TextBoxModem = New System.Windows.Forms.TextBox()
@@ -44,11 +43,11 @@ Partial Class Equipements
         'ButtonFacture
         '
         Me.ButtonFacture.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.ButtonFacture.Location = New System.Drawing.Point(228, 373)
+        Me.ButtonFacture.Location = New System.Drawing.Point(318, 329)
         Me.ButtonFacture.Name = "ButtonFacture"
         Me.ButtonFacture.Size = New System.Drawing.Size(79, 31)
         Me.ButtonFacture.TabIndex = 22
-        Me.ButtonFacture.Text = "Facture"
+        Me.ButtonFacture.Text = "ok"
         Me.ButtonFacture.UseVisualStyleBackColor = True
         '
         'LabelInternet
@@ -88,7 +87,6 @@ Partial Class Equipements
         Me.GroupBoxEquipement.Controls.Add(Me.LabelModemCost)
         Me.GroupBoxEquipement.Controls.Add(Me.LabelInternetCost)
         Me.GroupBoxEquipement.Controls.Add(Me.LabelTotal)
-        Me.GroupBoxEquipement.Controls.Add(Me.ButtonQuitter)
         Me.GroupBoxEquipement.Controls.Add(Me.ButtonFacture)
         Me.GroupBoxEquipement.Controls.Add(Me.CheckBoxLouer)
         Me.GroupBoxEquipement.Controls.Add(Me.TextBoxInternet)
@@ -155,15 +153,6 @@ Partial Class Equipements
         Me.LabelTotal.Size = New System.Drawing.Size(61, 25)
         Me.LabelTotal.TabIndex = 27
         Me.LabelTotal.Text = "$0.00"
-        '
-        'ButtonQuitter
-        '
-        Me.ButtonQuitter.Location = New System.Drawing.Point(493, 374)
-        Me.ButtonQuitter.Name = "ButtonQuitter"
-        Me.ButtonQuitter.Size = New System.Drawing.Size(86, 30)
-        Me.ButtonQuitter.TabIndex = 26
-        Me.ButtonQuitter.Text = "Quitter"
-        Me.ButtonQuitter.UseVisualStyleBackColor = True
         '
         'CheckBoxLouer
         '
@@ -233,7 +222,6 @@ Partial Class Equipements
     Friend WithEvents LabelMicroOrdi As Label
     Friend WithEvents GroupBoxEquipement As GroupBox
     Friend WithEvents ButtonCalculate As Button
-    Friend WithEvents ButtonQuitter As Button
     Friend WithEvents CheckBoxLouer As CheckBox
     Friend WithEvents TextBoxInternet As TextBox
     Friend WithEvents TextBoxModem As TextBox

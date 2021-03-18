@@ -3,29 +3,16 @@ Imports System.Data.SQLite
 
 Public Class Login
 
+    'Une variable pour la connection de la base de donnees
     Private connectionString = String.Empty
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'La connection de la base de donnees
         connectionString = String.Format("Data Source={0};Version=3;",
-                                         Directory.GetCurrentDirectory() & "\" & "usersDB.db")
+                                         Directory.GetCurrentDirectory() & "\" & "usersDb.db")
 
 
     End Sub
-    'Ici pour affichier la base de donnees dans la liste des clients et les contrats
-    'Dim myconnection As New SQLiteConnection("Data Source=\SAGARI.db3;Version=3")
-    'myconnection.Open()
-
-    'Dim cmd As New SQLiteCommand
-    'cmd.Connection = myconnection
-    'cmd.CommandText = "Select * from Employe"
-
-    'Dim reader As SQLiteDataReader = cmd.ExecuteReader
-    'Dim datatable As New DataTable
-    'DataTable.Load(reader)
-    'reader.Close()
-    'myconnection.Close()
-
-
     Private Sub Button2_Click(sender As Object, e As EventArgs)
 
     End Sub
@@ -44,10 +31,11 @@ Public Class Login
 
     Private Sub Button2_Click_1(sender As Object, e As EventArgs) Handles Button2.Click
 
+        'Valider is le nom de l'utilisateur et le mot de passe est correct ou non
         If IsUserValid(txt_username.Text.Trim, txt_password.Text.Trim) = True Then
             MsgBox("Bienvenue.")
 
-            ' if the password is valid then open the Main user form
+            'Si le mot de passe est corret, on va ouvrir la page principale
             Me.Hide()
             Dim frmMainForm As New PageConsulter
             frmMainForm.Show()
@@ -75,7 +63,7 @@ Public Class Login
 
                         If dt.Rows.Count > 0 Then
                             userInfo = dt.Rows(0)
-                            ' get the password salt from database
+                            'Obtenir le mot de passe de la base de donnees
                             'Dim dbSalt As String = userInfo("user_salt")
 
                             ' get the hashed password from the database
