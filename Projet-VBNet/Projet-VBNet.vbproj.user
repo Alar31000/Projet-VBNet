@@ -10,16 +10,19 @@
     <Compile Update="CreerUnNouveauContrat.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Login.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Equipements.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormFacture.vb">
+    <Compile Update="FrmConsulter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Login.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="PageConsulter.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Payment.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Services.vb">
